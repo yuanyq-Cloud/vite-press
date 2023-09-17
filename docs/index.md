@@ -8,6 +8,9 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
+      text: Web Front-end
+      link: /front/web-front-end
+    - theme: alt
       text: Markdown Examples
       link: /examples/markdown-examples
     - theme: alt

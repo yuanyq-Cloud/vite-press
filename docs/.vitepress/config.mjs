@@ -1,43 +1,41 @@
 import { defineConfig } from 'vitepress'
+import MarkdownItKatex from 'markdown-it-katex'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "yuanyq's docs",
+    title: 'Mr.Yuan的个人网站',
     description: 'A VitePress Site',
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Examples', link: '/examples/markdown-examples' },
+            { text: 'Web Front-end', link: '/front/web-front-end' },
+            { text: 'Algorithm', link: '/algorithm/n-np' },
         ],
-
-        sidebar: [
-            {
-                text: 'Examples',
+        sidebar: {
+            '/examples/': {
                 items: [
                     { text: 'Markdown Examples', link: '/examples/markdown-examples' },
                     { text: 'Runtime API Examples', link: '/examples/api-examples' },
-                    { text: 'Team Page Examples', link: '/team-page' },
+                    { text: 'Team Page Examples', link: '/examples/team-page' },
                 ],
             },
-            {
-                text: 'JavaScript',
-                items: [{ text: 'Runtime API Examples', link: '/examples/api-examples' }],
+            '/front/': {
+                items: [{ text: 'JavaScript', items: [{ text: 'Vue' }, { text: 'Node' }] }, { text: 'CSS' }, { text: 'HTML' }],
             },
-            {
-                text: 'CSS',
-                items: [{ text: 'Runtime API Examples', link: '/examples/api-examples' }],
+            '/algorithm/': {
+                items: [
+                    {
+                        text: 'P vs. NP',
+                        link: '/algorithm/n-np',
+                    },
+                ],
             },
-            {
-                text: 'HTML',
-                items: [{ text: 'Runtime API Examples', link: '/examples/api-examples' }],
-            },
-            {
-                text: 'Node',
-                items: [{ text: 'Runtime API Examples', link: '/examples/api-examples' }],
-            },
-        ],
-
+        },
         socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    },
+    extendsMarkdown: (md) => {
+        md.use(MarkdownItKatex)
     },
 })

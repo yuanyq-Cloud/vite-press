@@ -1,3 +1,9 @@
+<script setup>
+import latex from '/components/latex.vue'
+
+</script>
+<!-- <latex>123</latex> -->
+
 # Title-1
 
 ## Title-1-1
@@ -31,6 +37,10 @@ var str = 'my code'
 
 ![formula](https://latex.codecogs.com/svg.image?\int\frac{log_{2}16x}{3}x^{2}dx)
 
-$$x_{k_n}$$
+$\left ( -1 \right )^{S}\times 1.M\times 2^{P-x}$
 
-[yuanyq's blog](yuanyq.cn)
+$\nabla \cdot \vec{\mathbf{B}}  = 0$ | divergence of $\vec{\mathbf{B}}$
+
+$(1+x)^{n} =1 + \frac{nx}{1!} + \frac{n(n-1)x^{2}}{2!} + \cdots$
+
+[思否](https://segmentfault.com/)

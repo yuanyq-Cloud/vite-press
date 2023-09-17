@@ -8,7 +8,7 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-V634PGSD.js";
+} from "./chunk-DFO4XBXW.js";
 
 // node_modules/vitepress/dist/client/theme-default/index.js
 import "D:/Git_repository/make-something/vite-press/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
