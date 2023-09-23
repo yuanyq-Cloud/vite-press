@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: #ecf0f3;
+    color:#a0a5a8;
+}
+
+.shell {
+    position: relative;
+    width: 1000px;
+    min-width: 1000px;
+    min-height: 600px;
+    height: 600px;
+    padding: 25px;
+    background-color: #ecf0f3;
+    box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* 设置响应式*/
+@media (max-width:1200px) {
+    .shell {
+        transform: scale(0.7);
+    }
+}
+@media (max-width:1000px) {
+    .shell{
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width:800px) {
+    .shell{
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width:600px) {
+    .shell{
+        transform: scale(0.4);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 600px;
+    height: 100%;
+    padding: 25px;
+    background-color: #ecf0f3;
+    transition: 1.25s;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.form_icons {
+}
+.form .form_icons .fa-brands {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+    color: #181818;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+    cursor: pointer;
+}
+/* .iconfont {
+    margin: 0 5px;
+    border: rgba(0,0,0,0,5) 2px solid;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 3px;
+    opacity: 0.5;
+    transition: 0.1s;
+}
+.iconfont:hover {
+    opacity: 1;
+    transition: 0.15s;
+    cursor: pointer;
+} */
+.form_input {
+    width: 65%;
+    height: 55px;
+    padding: 16px;
+    margin: 8px 0;
+    border: 0;
+    border-radius: 20px;
+    background: #eee;
+    font-size: 20px;
+    outline: 0;
+    box-shadow: inset 4px 4px 4px #d1d9e6,inset -4px -4px 4px #f9f9f9;
+}
+/* .form_input:focus{
+    box-shadow: inset 5px 5px 20px #d1d9e6, inset 0px -5px 12px #fff;
+} */
+.form_span {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+.form_link {
+    color:#181818;
+    font-size: 15px;
+    margin-top: 25px;
+    border-bottom: 1px solid #a0a5a8;
+    line-height: 2;
+}
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 3;
+    color: #181818;
+    letter-spacing: 10px;
+}
+.white {
+    color:#f9f9f9
+}
+.description {
+    color:lightblue;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    line-height: 1.6;
+}
+.button {
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 45px;
+    margin: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+    /* width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.15px;
+    background-color: #4B70E2;
+    color: #f9f9f9;
+    box-shadow:  8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
+    border: none;
+    outline: none; */
+}
+.white_button {
+    box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+}
+.white_button:active {
+    box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff !important;
+}
+.white_button:hover {
+    background-color: #f7f7f7 !important;
+}
+
+.a-container {
+    z-index: 100;
+    left: calc(100% - 600px);
+}
+.b-container {
+    z-index: 0;
+    left: calc(100% - 600px);
+}
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    padding: 50px;
+    z-index: 200;
+    transition: 1.25s;
+    background-color: rgb(32, 140, 142);
+    overflow: hidden;
+    box-shadow: 4px 4px 10px rgb(28, 90, 110), -4px -4px 10px rgb(28, 90, 110);
+}
+.switch_circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #ecf0f3;
+    box-shadow: inset 8px 8px 12px #b8bec7, inset -8px -8px 12px #fff;
+    bottom: -60%;
+    left: -60%;
+    transition: 1.25s;
+}
+.switch_circle-t {
+    top: -30%;
+    left: 60%;
+    width: 300px;
+    height: 300px;
+}
+.switch_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    padding: 50px 55px;
+    transition: .25s;
+}
+.switch_button {
+    cursor: pointer;
+    background-color: rgb(32, 140, 142);
+    color: #fff;
+    box-shadow: -1px -2px 8px rgb(84, 202, 197), 5px 5px 8px rgb(7, 64, 83);
+}
+.switch_button:hover{
+    background-color: rgba(80, 200, 193,0.2);
+}
+/**
+*发现有趣的现象，将active和focus合用会导致按钮持续active。
+*/
+.switch_button:active {
+    box-shadow: inset 1px 1px 2px rgb(7, 64, 83), inset -1px -1px 2px rgb(84, 202, 197);
+    transform: scale(0.97);
+    transition: 0.25s;
+}
+.is-txr {
+    left: calc(100% - 400px );
+    transition: 1.25s;
+    transform-origin: left;
+}
+.is-txl {
+    left: 0;
+    transition: 1.25s;
+}
+.is-z {
+    z-index: 200;
+    transition: 1.25s;
+}
+.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: .25s;
+}
+.is-gx {
+    animation: is-gx 1.25s;
+}
+@keyframes is-gx {
+    0%,
+    10%,
+    100% {
+        width: 400px;
+    }
+    30%,
+    50% {
+        width: 500px;
+    }
+}

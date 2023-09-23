@@ -3,7 +3,7 @@ import MarkdownItKatex from 'markdown-it-katex'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: 'Mr.Yuan的个人网站',
+    title: 'Mr.Yuan的技术文档',
     description: 'A VitePress Site',
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
@@ -12,6 +12,7 @@ export default defineConfig({
             { text: 'Examples', link: '/examples/markdown-examples' },
             { text: 'Web Front-end', link: '/front/web-front-end' },
             { text: 'Algorithm', link: '/algorithm/n-np' },
+            { text: 'Others', link: '/block-chain/block-chain-overview' },
         ],
         sidebar: {
             '/examples/': {
@@ -22,13 +23,31 @@ export default defineConfig({
                 ],
             },
             '/front/': {
-                items: [{ text: 'JavaScript', items: [{ text: 'Vue' }, { text: 'Node' }] }, { text: 'CSS' }, { text: 'HTML' }],
+                items: [
+                    { text: 'JavaScript', items: [{ text: 'Vue' }, { text: 'Node' }] },
+                    { text: 'CSS', items: [] },
+                    {
+                        text: 'HTML',
+                        items: [
+                            { text: 'HTML attribute', link: '/front/html-attr' },
+                            { text: 'Slide login', link: '/front/practice/slide-login' },
+                        ],
+                    },
+                ],
             },
             '/algorithm/': {
                 items: [
                     {
                         text: 'P vs. NP',
                         link: '/algorithm/n-np',
+                    },
+                ],
+            },
+            '/block-chain/': {
+                items: [
+                    {
+                        text: 'Block-chain overview',
+                        link: '/block-chain/block-chain-overview',
                     },
                 ],
             },
