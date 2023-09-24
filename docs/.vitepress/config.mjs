@@ -3,13 +3,13 @@ import MarkdownItKatex from 'markdown-it-katex'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: 'Mr.Yuan的技术文档',
+    title: 'Mr_Yuan的技术文档',
     description: 'A VitePress Site',
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Examples', link: '/examples/markdown-examples' },
+            // { text: 'Examples', link: '/examples/markdown-examples' },
             { text: 'Web Front-end', link: '/front/web-front-end' },
             { text: 'Algorithm', link: '/algorithm/n-np' },
             { text: 'Others', link: '/block-chain/block-chain-overview' },
