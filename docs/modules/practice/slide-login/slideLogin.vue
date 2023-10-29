@@ -2,23 +2,23 @@
     <div class="shell">
         <div class="container a-container" id="a-container">
             <form action="" class="form" id="b-form">
-                <div class="form_title title">登入账号</div>
+                <div class="form_title title">Login</div>
                 <div class="form_icons">
                     <i class="white_button fa-brands fa-github"></i>
                     <i class="white_button fa-brands fa-qq"></i>
                     <i class="white_button fa-brands fa-weixin"></i>
                 </div>
-                <span class="form_span">选择登录方式激活电子邮箱注册</span>
-                <input type="text" class="form_input" placeholder="Name" />
+                <span class="form_span">Log in using your social account</span>
+                <!-- <input type="text" class="form_input" placeholder="Name" /> -->
                 <input type="email" class="form_input" placeholder="Email" />
                 <input type="password" class="form_input" placeholder="Password" />
-                <span href="" class="form_link">忘记密码？</span>
+                <span href="" class="form_link">Forgot Password?</span>
                 <button type="button" class="white_button button submit">SING IN</button>
             </form>
         </div>
         <div class="container b-container" id="b-container">
             <form action="" class="form" id="a-form">
-                <div class="form_title title">创建账号</div>
+                <div class="form_title title">Sign Up</div>
                 <div class="form_icons">
                     <i class="fa-brands fa-github"></i>
                     <i class="fa-brands fa-qq"></i>
@@ -32,8 +32,8 @@
             </form>
         </div>
         <div class="switch" id="switch-cnt">
-            <div class="switch_circle"></div>
-            <div class="switch_circle switch_circle_t"></div>
+            <div class="circle switch_circle"></div>
+            <div class="circle switch_circle2"></div>
             <div class="switch_container" id="switch-c1">
                 <div class="switch_title title white" style="letter-spacing: 0">Hellow Friend!</div>
                 <p class="switch_description description">去注册一个账号，成为尊贵的粉丝会员，让我们踏入奇妙的旅途</p>

@@ -27,12 +27,12 @@ features:
 ---
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
-import treeImg from '/img/tree.png'
+// import treeImg from '/img/tree.png'
 import icons from '/img/icon/icons.vue'
 
 const members = [
   {
-    avatar: treeImg,
+    avatar: 'tree.png',
     name: 'Yuanyq',
     title: 'Creator',
     links: [
@@ -44,11 +44,14 @@ const members = [
 ]
 </script>
 <VPTeamMembers size="small" :members="members" />
-
-<div style="text-align:center">Welcome to apply for a friend link.</div>
+<div style="text-align:center">If you'd like to swap links, please get in touch.</div>
 
 <style>
 .VPTeamMembers.small.count-1 .container {
     margin:50px auto;
+}
+.VPTeamMembers .profile .avatar .avatar-img {
+    -webkit-user-drag: none;
+    user-select: none;
 }
 </style>

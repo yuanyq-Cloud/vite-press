@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +22,7 @@ body {
     color:#a0a5a8;
 }
 
-.shell {
+._front_practice_slide-login .shell {
     position: relative;
     width: 1000px;
     min-width: 1000px;
@@ -31,6 +33,7 @@ body {
     box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #f9f9f9;
     border-radius: 12px;
     overflow: hidden;
+    /* font-family: "Kalam", sans-serif; */
 }
 
 /* 设置响应式*/
@@ -39,21 +42,31 @@ body {
         transform: scale(0.7) translateX(-220px);
     }
 }
-@media (max-width:1000px) {
+@media (max-width:1050px) {
     .shell{
         transform: scale(0.6) translateX(-260px);
     }
 }
 
-@media (max-width:800px) {
+@media (max-width:1000px) {
     .shell{
-        transform: scale(0.5) translateX(-400px);
+        transform: scale(0.5) translateX(-450px);
     }
 }
 
 @media (max-width:600px) {
     .shell{
         transform: scale(0.4) translateX(-700px);
+    }
+}
+@media (max-width:500px) {
+    .shell{
+        transform: scale(0.35) translate(-900px, -500px);
+    }
+}
+@media (max-width:400px) {
+    .shell{
+        transform: scale(0.3) translateX(-1100px);
     }
 }
 
@@ -71,7 +84,7 @@ body {
 }
 .form {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -136,7 +149,7 @@ body {
     font-weight: 700;
     line-height: 3;
     color: #181818;
-    letter-spacing: 10px;
+    letter-spacing: 2px;
 }
 .white {
     color:#f9f9f9
@@ -180,7 +193,8 @@ body {
     box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff !important;
 }
 .white_button:hover {
-    background-color: #f7f7f7 !important;
+    color:rgb(32, 140, 142) !important
+    /* background-color: #f7f7f7 !important; */
 }
 
 .a-container {
@@ -207,22 +221,27 @@ body {
     overflow: hidden;
     box-shadow: 4px 4px 10px rgb(28, 90, 110), -4px -4px 10px rgb(28, 90, 110);
 }
-.switch_circle {
+.circle {
     position: absolute;
+    border-radius: 50%;
+    transition: 1.25s;
+
+}
+.switch_circle {
     width: 500px;
     height: 500px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.3);
-    box-shadow: -5px -5px 15px rgb(28, 90, 110), 10px 10px 15px rgb(28, 90, 110);
     bottom: -60%;
     left: -60%;
-    transition: 1.25s;
+    box-shadow:inset 5px 8px 5px #196d6f, inset 15px 15px 36px #196D70;
+    background-color: rgba(255,255,255,0.1);
 }
-.switch_circle_t {
+.switch_circle2 {
     top: -30%;
     left: 60%;
     width: 300px;
     height: 300px;
+    box-shadow: inset 7px 0px 5px #196d6f, inset 15px 15px 36px #196D70;
+    background-color: rgba(255,255,255,0.1);
 }
 .switch_container {
     display: flex;
@@ -275,11 +294,9 @@ body {
 }
 @keyframes is-gx {
     0%,
-    10%,
     100% {
         width: 400px;
     }
-    30%,
     50% {
         width: 500px;
     }

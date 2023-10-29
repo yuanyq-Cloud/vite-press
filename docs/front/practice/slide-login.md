@@ -3,7 +3,7 @@ layout: doc
 ---
 
 <script setup>
-import SlideLogin from '../../modules/practice/slide-login/index.vue'
+import SlideLogin from '../../modules/practice/slide-login/slideLogin.vue'
 </script>
 
 # Slide login
@@ -13,4 +13,22 @@ This is a code exercise without real functionality.
 :::
 
 <SlideLogin></SlideLogin>
-<!-- <iframe src="/practice/slide-login/index.html?where=yuanyq" width="100%" height="420px" style="border: none;"></iframe> -->
+
+<style>
+    /* VPContent响应设计：
+    min-width: 1440px，padding
+    min-width: 960px，padding
+·   padding = 0
+    */
+    .VPContent .VPDoc .vp-doc._front_practice_slide-login{
+        /* background-color:#ecf0f3; */
+    }
+    @media (max-width:1050px) {
+            width: 650px;
+    }
+    @media (min-width:1440px){
+        .VPContent .VPDoc .vp-doc._front_practice_slide-login{
+            width:1000px;
+        }
+    }
+</style>

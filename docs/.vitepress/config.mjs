@@ -1,9 +1,12 @@
 import { defineConfig } from 'vitepress'
-import MarkdownItKatex from 'markdown-it-katex'
+// import MarkdownItKatex from 'markdown-it-katex'
+
+// import { fileURLToPath, URL } from 'url'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: 'Mr_Yuan的技术文档',
+    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     description: 'A VitePress Site',
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
@@ -31,6 +34,7 @@ export default defineConfig({
                         items: [
                             { text: 'HTML attribute', link: '/front/html-attr' },
                             { text: 'Slide login', link: '/front/practice/slide-login' },
+                            { text: 'Search bar', link: '/front/practice/search-bar' },
                         ],
                     },
                 ],
@@ -54,7 +58,12 @@ export default defineConfig({
         },
         socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
     },
-    extendsMarkdown: (md) => {
-        md.use(MarkdownItKatex)
-    },
+    // it doesn't work
+    // extendsMarkdown: (md) => {
+    //     md.use(MarkdownItKatex)
+    // },
+    // it doesn't work
+    // resolve: {
+    //     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) }
+    // }
 })
