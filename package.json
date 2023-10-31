@@ -9,6 +9,9 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.10",
+    "@vuepress/plugin-medium-zoom": "^1.9.10",
+    "@vuepress/plugin-nprogress": "^1.9.10",
     "markdown-it": "^13.0.1",
     "markdown-it-katex": "^2.0.3",
     "markdown-it-mathjax3": "^4.3.2"

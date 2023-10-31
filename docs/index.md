@@ -6,10 +6,13 @@ hero:
   name: "Yuanyq's docs"
   text: "Base on vuepress"
   tagline: My very first website
+#   image:
+#     src: /logo-with-shadow.png
+#     alt: Vue Amazing UI
   actions:
     - theme: brand
       text: Web Front-end
-      link: /front/web-front-end
+      link: /front/html/html-attr
     - theme: alt
       text: Markdown Examples
       link: /examples/markdown-examples
