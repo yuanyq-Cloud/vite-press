@@ -1,7 +1,7 @@
-<script setup>
+<!-- <script setup>
 import latex from '/components/latex.vue'
 
-</script>
+</script> -->
 <!-- <latex>123</latex> -->
 
 # Title-1

@@ -1,6 +1,5 @@
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
-// import treeImg from '/img/tree.png'
 import icons from '/img/icon/icons.vue'
 
 const members = [

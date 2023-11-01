@@ -16,7 +16,7 @@ export default defineConfig({
             { text: 'Web Front-end', link: '/front/html/html-attr' },
             { text: 'Front-end Framework', link: '/front/front-framework/Vue-intro' },
             { text: 'Algorithm', link: '/algorithm/n-np' },
-            { text: 'Others', link: '/block-chain/block-chain-overview' },
+            { text: 'Others', link: '/others/block-chain-overview' },
         ],
         sidebar: {
             '/examples/': {
@@ -91,11 +91,15 @@ export default defineConfig({
                     },
                 ],
             },
-            '/block-chain/': {
+            '/others/': {
                 items: [
                     {
                         text: 'Block-chain overview',
-                        link: '/block-chain/block-chain-overview',
+                        link: '/others/block-chain-overview',
+                    },
+                    {
+                        text: 'docker for windows',
+                        link: '/others/docker-for-windows',
                     },
                 ],
             },
