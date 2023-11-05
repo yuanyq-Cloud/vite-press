@@ -10,7 +10,7 @@ docker下载地址：https://www.docker.com/products/docker-desktop/
 <center>来源网络</center>
 <!-- ![示例图](../img/docker-err.jpg) -->
 
-> <center>An unexpected error occurred</center>&nbsp&nbsp&nbsp&nbspAn unexpected error was encountered while executing a WSLcommand. Common causes include access rights issues, which occurafter waking the computer or not being connected to your domain/active directory.
+> <center>An unexpected error occurred</center>An unexpected error was encountered while executing a WSLcommand. Common causes include access rights issues, which occurafter waking the computer or not being connected to your domain/active directory.
 
 ## 处理方法
 ### 方法1
