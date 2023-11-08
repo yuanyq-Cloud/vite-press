@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
-// import MarkdownItKatex from 'markdown-it-katex'
-
-// import { fileURLToPath, URL } from 'url'
+// import { vuePlugin } from 'vitepress-demo-editor'
+// import 'vitepress-demo-editor/dist/style.css'
+// import markdownPlugin from 'vitepress-demo-editor/markdownPlugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -109,19 +109,20 @@ export default defineConfig({
             message: '粤ICP备2023109458号',
             copyright: 'Copyright © 2023-present Yuanyq',
         },
+        // enhanceApp({ app }) {
+        //     app.use(vuePlugin, {
+        //         defaultDirection: 'row', // 默认显示方向
+        //         ms: 30, // 编辑器防抖时间
+        //         handleError(errs) {}, // 错误信息
+        //         onMonacoCreated(monaco) {}, // monaco 创建成功时触发
+        //     })
+        // },
         // lastUpdatedText: 'last updated',
     },
-    plugins: [
-        '@vuepress/back-to-top', // 返回顶部插件
-        '@vuepress/medium-zoom', // 图片预览插件
-        '@vuepress/nprogress', //页面顶部进度条
-    ],
-    // it doesn't work
-    // extendsMarkdown: (md) => {
-    //     md.use(MarkdownItKatex)
-    // },
-    // it doesn't work
-    // resolve: {
-    //     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) }
-    // }
+    markdown: {
+        math: true,
+        // config: (md) => {
+        //     md.use(markdownPlugin)
+        // },
+    },
 })

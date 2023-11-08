@@ -2,9 +2,10 @@
 import { VPTeamMembers } from 'vitepress/theme'
 import icons from '/img/icon/icons.vue'
 
+/**`./`会取到localhost/examples/tree.png*/
 const members = [
   {
-    avatar: 'tree.png',
+    avatar: '../tree.png',
     name: 'Yuanyq',
     title: 'Creator',
     links: [

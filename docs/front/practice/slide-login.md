@@ -12,7 +12,13 @@ import SlideLogin from '../../modules/practice/slide-login/slideLogin.vue'
 This is a code exercise without real functionality.
 :::
 
+<DemoContainer title="基本使用">
+<ClientOnly>
 <SlideLogin></SlideLogin>
+</ClientOnly>
+<!-- 这个源码引用方式是 vuepress 提供的 https://www.bookstack.cn/read/vuepress2-zh/e4e8d14a07207066.md-->
+</DemoContainer>
+
 
 <style>
     /* VPContent响应设计：
