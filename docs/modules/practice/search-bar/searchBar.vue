@@ -42,7 +42,7 @@ body {
     transition: 0.5s;
 }
 .search-box:hover {
-    width: 400px;
+    width: 100%;
 }
 .search-box::before {
     content: '';
