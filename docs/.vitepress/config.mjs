@@ -13,7 +13,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Web Front-end', link: '/front/html/html-attr' },
+            { text: 'Web Front-end', link: '/front/development/weird-debugging' },
             { text: 'Front-end Framework', link: '/front/front-framework/Vue-intro' },
             { text: 'Algorithm', link: '/algorithm/n-np' },
             { text: 'Others', link: '/others/block-chain-overview' },
@@ -26,8 +26,20 @@ export default defineConfig({
                     { text: 'Team Page Examples', link: '/examples/team-page' },
                 ],
             },
+            // '/front/development': {
+            //     items: [
+            //         {
+            //             text: 'development',
+            //             items: [{ text: 'Weird Debugging Tricks', link: '/front/development/weird-debugging' }],
+            //         },
+            //     ],
+            // },
             '/front/html': {
                 items: [
+                    {
+                        text: 'development',
+                        items: [{ text: 'Weird Debugging Tricks', link: '/front/development/weird-debugging' }],
+                    },
                     {
                         text: 'HTML',
                         items: [{ text: 'HTML attribute', link: '/front/html/html-attr' }],
@@ -46,6 +58,10 @@ export default defineConfig({
             '/front/javascript': {
                 items: [
                     {
+                        text: 'development',
+                        items: [{ text: 'Weird Debugging Tricks', link: '/front/development/weird-debugging' }],
+                    },
+                    {
                         text: 'HTML',
                         items: [{ text: 'HTML attribute', link: '/front/html/html-attr' }],
                     },
@@ -62,6 +78,10 @@ export default defineConfig({
             },
             '/front/css': {
                 items: [
+                    {
+                        text: 'development',
+                        items: [{ text: 'Weird Debugging Tricks', link: '/front/development/weird-debugging' }],
+                    },
                     {
                         text: 'HTML',
                         items: [{ text: 'HTML attribute', link: '/front/html/html-attr' }],
