@@ -7,5 +7,8 @@
         "dev": "vitepress dev docs",
         "build": "vitepress build docs",
         "preview": "vitepress preview docs"
+    },
+    "dependencies": {
+        "vue-grid-layout-v3": "^3.0.3"
     }
 }
