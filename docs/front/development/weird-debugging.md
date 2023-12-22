@@ -2,7 +2,7 @@
 
 >By using expressions that have side effects in places you wouldn't expect, we can squeeze more functionality out of basic features like conditional breakpoints.
 
-使用像条件断点这样的基本特性，通过表达式副作用从中挤出更多功能。
+使用有副作用的表达式，从像条件断点这样的基本特性中挤出更多功能。
 
 This page is excerpted from [this blog](https://alan.norbauer.com/articles/browser-debugging-tricks), documents about some of the debugging tricks that have worked for me.
 
@@ -46,14 +46,24 @@ Since id=1 evaluates to true, this conditional breakpoint would pause the debugg
 
 ## Quick and Dirty Performance Profiling
 
-You shouldn't muddy your performance profiling with things like conditional breakpoint evaluation time, but if you want a quick and dirty measurement of how long  something takes to run, you can use the console timing API in conditional breakpoints. In your starting point set a breakpoint with the condition console.time('label') and at the end point set a breakpoint with the condition console.timeEnd('label'). (用console.time对执行耗时进行dirty measurement)
+You shouldn't muddy your performance profiling with things like conditional breakpoint evaluation time, but if you want a quick and dirty measurement of how long  something takes to run.
+
+You can use the **console timing API** in conditional breakpoints. In your starting point set a breakpoint with the condition `console.time('label')`, and at the end point set a breakpoint with the condition `console.timeEnd('label')`.
+
+用console.time对执行耗时进行dirty measurement
+
 [img](perform.gif)
+
 Everytime the thing you're measuring runs, the browser will log to the console how long it takes.
 [img](perform.png)
+
 补充一个不需要断点的方法：
+
+```js
 const startTime = performance.now();
 /* ... do things for a while ... */
 const elapsedTime = performance.now() - startTime;
+```
 
 ## Using Function Arity(函数的“Arity”是指其期望接收的参数数量)
 
@@ -72,35 +82,53 @@ Only pause when the current function is called with the wrong number of argument
 
 ### Pause based on computed CSS values
 
-e.g. only pause execution when the document body has a red background color: window.getComputedStyle(document.body).backgroundColor === "rgb(255, 0, 0)"
-原文的写法漏了空格，等式不生效；值得注意的是，尽管赋值HEX格式颜色，从getComputedStyle返回的格式仍是RGB的。
+e.g. only pause execution when the document body has a red background color:
+
+```js
+window.getComputedStyle(document.body).backgroundColor === "rgb(255, 0, 0)"
+// 原文的写法漏了空格，等式不生效；值得注意的是，尽管赋值HEX格式颜色，从getComputedStyle返回的格式仍是RGB的。
+```
+
+
 
 ## Automatic Instance IDs
 
-Automatically assign a unique ID to every instance of a class by setting this conditional breakpoint in the constructor: (window.instances = window.instances || []).push(this)
+Automatically assign a unique ID to every instance of a class by setting this conditional breakpoint in the constructor:
 
-Then to retrieve the unique ID: window.instances.indexOf(instance) (e.g. window.instances.indexOf(this) when in a class method)（记录实例到全局）
-可以无侵入性地跟踪实例的状态，创建了多少个、创建的顺序是什么。
+```js
+(window.instances = window.instances || []).push(this)
+```
+
+Then to retrieve the unique ID: window.instances.indexOf(instance) (e.g. window.instances.indexOf(this) when in a class method)
+
+记录实例到全局,可以无侵入性地跟踪实例的状态，创建了多少个、创建的顺序是什么。
 
 ## monitor() class Calls
 
 You can use Chrome’s monitor command line method to easily trace all calls to class methods. E.g. given a class Dog
 
+```js
 class Dog {
-bark(count) {
-/* ... */
+    bark(count) {
+    /* ... */
+    }
 }
-}
+```
 
 If we want to know all calls made to all instances of Dog, paste this into the command line:
 
+```js
 var p = Dog.prototype;
 Object.getOwnPropertyNames(p).forEach((k) => monitor(p[k]));
+```
+
 and you’ll get output in the console:
 
 > function bark called with arguments: 2
+
 You can use debug instead of monitor if you want to pause execution on any method calls (instead of just logging to the console).
 【img】chrome-monitor
+
 From a Specific Instance
 Chrome
 If you don’t know the class but you have an instance:
