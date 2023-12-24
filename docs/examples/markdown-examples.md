@@ -2,6 +2,8 @@
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
+Markdown是非常轻量的标记语言，没有一个所谓的规范(作者都不支持这么做)，所以某些特性需要写作工具自己支持才可以。所以有可能A的markdown到B上就无法正确显示了，在vitepress上目前不支持类似csdn的注脚：[^1]。
+
 ## Syntax Highlighting
 
 [VitePress][1] provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
@@ -31,6 +33,8 @@ export default {
   }
 }
 ```
+
+[click here Jump to more](#more)
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
