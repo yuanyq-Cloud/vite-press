@@ -4,6 +4,27 @@ import { defineConfig } from 'vitepress'
 // import markdownPlugin from 'vitepress-demo-editor/markdownPlugin'
 
 // https://vitepress.dev/reference/site-config
+const frontEnd = {
+    items: [
+        {
+            text: 'development',
+            items: [{ text: 'Weird Debugging Tricks', link: '/front/development/weird-debugging' }],
+        },
+        {
+            text: 'HTML',
+            items: [{ text: 'HTML attribute', link: '/front/html/html-attr' }],
+        },
+        { text: 'JavaScript', items: [] },
+        { text: 'CSS', items: [] },
+        {
+            text: 'Practice',
+            items: [
+                { text: 'Slide login', link: '/front/practice/slide-login' },
+                { text: 'Search bar', link: '/front/practice/search-bar' },
+            ],
+        },
+    ],
+}
 export default defineConfig({
     title: 'Mr_Yuan的技术文档',
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
@@ -13,7 +34,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Web Front-end', link: '/front/html/html-attr' },
+            { text: 'Web Front-end', link: '/front/development/weird-debugging' },
             { text: 'Front-end Framework', link: '/front/front-framework/Vue-intro' },
             { text: 'Algorithm', link: '/algorithm/n-np' },
             { text: 'Others', link: '/others/block-chain-overview' },
@@ -26,57 +47,10 @@ export default defineConfig({
                     { text: 'Team Page Examples', link: '/examples/team-page' },
                 ],
             },
-            '/front/html': {
-                items: [
-                    {
-                        text: 'HTML',
-                        items: [{ text: 'HTML attribute', link: '/front/html/html-attr' }],
-                    },
-                    { text: 'JavaScript', items: [] },
-                    { text: 'CSS', items: [] },
-                    {
-                        text: 'Practice',
-                        items: [
-                            { text: 'Slide login', link: '/front/practice/slide-login' },
-                            { text: 'Search bar', link: '/front/practice/search-bar' },
-                        ],
-                    },
-                ],
-            },
-            '/front/javascript': {
-                items: [
-                    {
-                        text: 'HTML',
-                        items: [{ text: 'HTML attribute', link: '/front/html/html-attr' }],
-                    },
-                    { text: 'JavaScript', items: [] },
-                    { text: 'CSS', items: [] },
-                    {
-                        text: 'Practice',
-                        items: [
-                            { text: 'Slide login', link: '/front/practice/slide-login' },
-                            { text: 'Search bar', link: '/front/practice/search-bar' },
-                        ],
-                    },
-                ],
-            },
-            '/front/css': {
-                items: [
-                    {
-                        text: 'HTML',
-                        items: [{ text: 'HTML attribute', link: '/front/html/html-attr' }],
-                    },
-                    { text: 'JavaScript', items: [] },
-                    { text: 'CSS', items: [] },
-                    {
-                        text: 'Practice',
-                        items: [
-                            { text: 'Slide login', link: '/front/practice/slide-login' },
-                            { text: 'Search bar', link: '/front/practice/search-bar' },
-                        ],
-                    },
-                ],
-            },
+            '/front/development': frontEnd,
+            '/front/html': frontEnd,
+            '/front/javascript': frontEnd,
+            '/front/css': frontEnd,
             '/front/front-framework': {
                 items: [
                     { text: 'Vue intro', link: '/front/front-framework/Vue-intro' },
