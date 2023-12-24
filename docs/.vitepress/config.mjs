@@ -78,9 +78,10 @@ export default defineConfig({
                 ],
             },
         },
-        socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+        socialLinks: [{ icon: 'github', link: 'https://github.com/yuanyq-Cloud/vite-press' }],
         footer: {
-            message: '粤ICP备2023109458号',
+            message: '<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023109458号</a> · <a href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002001321" rel="noreferrer" target="_blank">粤公网安备44030002001321</a>',
+            // message: '粤ICP备2023109458号 <img style="display:inline;vertical-align:sub;" width="18" src="public_record.png" /> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002001321" rel="noreferrer" target="_blank">粤公网安备44030002001321</a>',
             copyright: 'Copyright © 2023-present Yuanyq',
         },
         // enhanceApp({ app }) {
